@@ -6,11 +6,11 @@ function QuoteOfTheDay() {
     const [quote, setQuote] = useState({
         id: null, advice: null,
     });
-
+    // ici on va utilise un useEffect pour changer toute les 6seconde la citation
     useEffect(() => { 
         const objectInterval = setInterval(fetchApiQuoteOfTheday, 5000);
         fetchApiQuoteOfTheday();
-
+        
         return () => {clearInterval(objectInterval)}
     }, []);
 
@@ -22,8 +22,8 @@ function QuoteOfTheDay() {
     }
     // fetchApiQuoteOfTheday()
     // console.log(quote)
-
-    function updateQuoteOftheDay(){
+    // possibilité d'appuyer sur un bouton pour en obtenir une autre citation
+    function updateQuoteOfTheDay(){
         fetchApiQuoteOfTheday();
     }
 
@@ -35,7 +35,7 @@ function QuoteOfTheDay() {
       <h2>{quote.id}: {quote.advice}</h2>
       <Button 
       label="Une autre citation du jour ?"
-      action={updateQuoteOftheDay}
+      action={updateQuoteOfTheDay}
       color="none"
       />
     </div>
