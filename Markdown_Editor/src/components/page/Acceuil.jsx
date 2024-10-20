@@ -6,13 +6,16 @@ import HistoricalEvents from '../api/HistoricalEvents'
 //render
 function Acceuil() {
   return (
-    <div className='api'>
-      <h1>Markdown Editor</h1>
-      <h2>API</h2>
-      <ShowTime/>
-      <QuoteOfTheDay/>
-      <HistoricalEvents/>
+    <div>      
+        <h1>Markdown Editor</h1>
+        <h2>API</h2>
+      <div className='api'>  
+        <ShowTime/>
+        <QuoteOfTheDay/>
+        <HistoricalEvents/>
+      </div>
     </div>
+
   )
 }
 

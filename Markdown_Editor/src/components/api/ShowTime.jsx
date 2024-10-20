@@ -31,7 +31,7 @@ class ShowTime extends React.Component {
 
     render() {
         return (
-            <div className='Show_time'>
+            <div className='show_time'>
                 <h1>Show Time</h1>
                 <h2>Il est {this.state.date.getHours()}:{this.state.date.getMinutes()}:{this.state.date.getSeconds()}</h2>
             </div>
