@@ -1,6 +1,7 @@
 import React from 'react'
 
 //Documentation pour d'info : https://fr.legacy.reactjs.org/docs/state-and-lifecycle.html
+//Fouad code
 
 class ShowTime extends React.Component {
     constructor(props){
