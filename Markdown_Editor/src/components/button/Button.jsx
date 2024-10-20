@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 
+//code fait par FOUAD LAMNAOUAR
+//Un exemple de component Button que je réutilise dans tout mes projet react
+
 const Button = ({ label, action, color }) => {
     return (
         <button className="btn"

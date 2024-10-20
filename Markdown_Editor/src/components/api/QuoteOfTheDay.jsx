@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import Button from "../button/Button"
 
+//code fait par FOUAD LAMNAOUAR
+//je me suis inspirer du cour de React (exercice iss)
+
 function QuoteOfTheDay() {
 
     const [quote, setQuote] = useState({
