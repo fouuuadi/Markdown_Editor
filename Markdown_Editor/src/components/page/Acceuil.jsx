@@ -1,4 +1,3 @@
-import React from 'react'
 import ShowTime from '../api/ShowTime'
 import QuoteOfTheDay from '../api/QuoteOfTheDay'
 
