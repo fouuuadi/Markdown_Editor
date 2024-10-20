@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const Button = ({ label, action, color }) => {
     return (
-        <button
+        <button className="btn"
             style={{ backgroundColor: color }}
             onClick={() => {
                 action && action();

@@ -5,7 +5,7 @@ import QuoteOfTheDay from '../api/QuoteOfTheDay'
 //render
 function Acceuil() {
   return (
-    <div>
+    <div className='api'>
       <h1>Hello Fouad</h1>
       <h2>API</h2>
       <ShowTime/>
