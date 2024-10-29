@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Documentation pour d'info : https://fr.legacy.reactjs.org/docs/state-and-lifecycle.html
-//Fouad code
+//code fait par FOUAD LAMNAOUAR
 
 class ShowTime extends React.Component {
     constructor(props){
@@ -31,7 +31,7 @@ class ShowTime extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='show_time'>
                 <h1>Show Time</h1>
                 <h2>Il est {this.state.date.getHours()}:{this.state.date.getMinutes()}:{this.state.date.getSeconds()}</h2>
             </div>
