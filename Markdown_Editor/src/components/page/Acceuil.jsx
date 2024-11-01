@@ -19,7 +19,9 @@ function Acceuil() {
         <HistoricalEvents/>
         <JokeOfTheDay/>
         <MocktailOfTheDay/>
-        <RecipeOfTheDay/>
+        <RecipeOfTheDay/>        
+      </div>
+      <div className='section2'>
         <ListeMarkDown/>
       </div>
     </div>
