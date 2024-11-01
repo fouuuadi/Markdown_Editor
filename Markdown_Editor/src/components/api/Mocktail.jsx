@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function MockatailOfTheDay() {
+function MocktailOfTheDay() {
     const [mocktail, setMocktail] = useState({
         id: null,
         strDrink: "",
@@ -55,4 +55,4 @@ function MockatailOfTheDay() {
     )
 }
 
-export default MockatailOfTheDay;
+export default MocktailOfTheDay;

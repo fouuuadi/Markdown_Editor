@@ -1,7 +1,9 @@
 import ShowTime from '../api/ShowTime'
 import QuoteOfTheDay from '../api/QuoteOfTheDay'
 import HistoricalEvents from '../api/HistoricalEvents'
-
+import JokeOfTheDay from '../api/Joke'
+import MocktailOfTheDay from '../api/Mocktail'
+import RecipeOfTheDay from '../api/Recipe'
 
 //render
 function Acceuil() {
@@ -13,6 +15,9 @@ function Acceuil() {
         <ShowTime/>
         <QuoteOfTheDay/>
         <HistoricalEvents/>
+        <JokeOfTheDay/>
+        <MocktailOfTheDay/>
+        <RecipeOfTheDay/>
       </div>
     </div>
 
