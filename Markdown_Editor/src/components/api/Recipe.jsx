@@ -109,32 +109,23 @@ function RecipeOfTheDay() {
             <p>{recipe.strMeal}</p> 
             {/* <p>{recipe.strDrinkAlternate}</p> */}
             <p>{recipe.strInstructions}</p>
-            <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-
-
             <img className="img_recipe" src={recipe.strMealThumb} alt={recipe.strMeal} />
             {/* Bouton pour ouvrir la modale */}
             <button onClick={() => setVisible(true)}>Voir les détails</button>
 
             {/* Modale pour afficher les détails */}
             <dialog open={visible}>
-
                 <div>
-                    <div>
-                        <h2>{recipe.strMeal} - Détails</h2>
-                        <h3>Ingrédients</h3>
-                        <ul>
-                            {getIngredients().map((item, index) => (
-                                <li key={index}>{item}</li>
-                            {/* appel fonction faisant le tour du tableau réunissant les ingrédients et les mesures */}
-                            {getIngredients().map((ingredient, measure) => (
-                                <li key={measure}>{ingredient}</li>
-                            ))}
-                        </ul>
-                        <h3>Instructions</h3>
-                        <p>{recipe.strInstructions}</p>
-                        <button onClick={() => setVisible(false)}>Fermer</button>
-                    </div>
+                    <h2>{recipe.strMeal} - Détails</h2>
+                    <h3>Ingrédients</h3>
+                    <ul>
+                        {getIngredients().map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                    <h3>Instructions</h3>
+                    <p>{recipe.strInstructions}</p>
+                    <button onClick={() => setVisible(false)}>Fermer</button>
                 </div>
             </dialog>
            
