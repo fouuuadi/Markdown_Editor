@@ -168,3 +168,50 @@ p{
 .dialog button:hover {
   background-color: #2980B9; 
 }
+
+
+/** Css edit_Markdown **/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3.5rem;
+  background-color: bisque;
+  padding: .5rem;
+
+}
+
+.js-ct {
+  display: flex;
+  justify-content: space-between;
+}
+
+.writeMd {
+  width: auto;
+  height: auto;
+}
+
+textarea {
+  padding: 10px 10px;
+  width: 50vw;
+  height: 90vh;
+
+}
+
+.toHtml {
+  width: auto;
+  height: auto;
+  border: 1px solid #FDFDFFFF;
+
+}
+
+.content {
+  width: 50vw;
+  height: 90vh;
+}
+
+.style-btn {
+  width: 70px;
+  height: 40px;
+}
