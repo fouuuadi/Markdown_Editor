@@ -39,23 +39,32 @@ body{
     cursor: not-allowed;
   }
 
-.api{
+.section1{
   display: flex;
   flex-direction: column;
   gap: 4em;
-  padding: 40px;
-}
-.show_time {
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-}
-.quote_of_the_day {
-  display: flex;
-  gap: 2em;
+  padding: 20px;
 }
 
-.event{
-  display: flex;
-  gap: 2em;
+.show_time,
+.quote_of_the_day,
+.event,
+.joke,
+.recipe,
+.mocktail{
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.img_mocktail {
+  width: 200px;
+  height: 150px;
+}
+
+
+
+.img_recipe {
+  width: 200px;
+  height: 150px;
 }

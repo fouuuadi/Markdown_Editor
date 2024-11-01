@@ -47,10 +47,10 @@ function MocktailOfTheDay() {
     }, []);
 
     return (
-        <div>
+        <div className='mocktail'>
             <h1>Mocktail Of The Day</h1>
             <h2>{mocktail.strDrink}</h2>
-            <img src={mocktail.strDrinkThumb} alt={mocktail.strDrinkThumb} />
+            <img className="img_mocktail" src={mocktail.strDrinkThumb} alt={mocktail.strDrinkThumb} />
         </div>
     )
 }

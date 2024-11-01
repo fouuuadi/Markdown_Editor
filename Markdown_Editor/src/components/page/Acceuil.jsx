@@ -13,7 +13,7 @@ function Acceuil() {
     <div>      
         <h1>Markdown Editor</h1>
         <h2>API</h2>
-      <div className='api'>  
+      <div className='section1'>  
         <ShowTime/>
         <QuoteOfTheDay/>
         <HistoricalEvents/>
