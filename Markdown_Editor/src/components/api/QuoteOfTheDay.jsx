@@ -36,7 +36,8 @@ function QuoteOfTheDay() {
     <div className="quote_of_the_day">
       <h1>Citation du jour en Anglais</h1>
       <h2>{quote.id}: {quote.advice}</h2>
-      <Button 
+      <Button
+      className="btn_quote" 
       label="Une autre citation du jour ?"
       action={updateQuoteOfTheDay}
       color="none"

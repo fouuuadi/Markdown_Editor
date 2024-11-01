@@ -90,23 +90,23 @@ function RecipeOfTheDay() {
     }, []); 
 
 
-    // const getIngredients = () => {
-    //     const ingredients = [];
-    //     for (let i = 1; i <= 20; i++) {
-    //         const ingredient = recipe[`strIngredient${i}`];
-    //         const measure = recipe[`strMeasure${i}`];
-    //         if (ingredient) {
-    //             ingredients.push(`${measure} ${ingredient}`);
-    //         }
-    //     }
-    //     return ingredients;
-    // };
+    const getIngredients = () => {
+        const ingredients = [];
+        for (let i = 1; i <= 20; i++) {
+            const ingredient = recipe[`strIngredient${i}`];
+            const measure = recipe[`strMeasure${i}`];
+            if (ingredient) {
+                ingredients.push(`${measure} ${ingredient}`);
+            }
+        }
+        return ingredients;
+    };
 
     return (
         <div className='recipe'>
             <h1>Recipe Of The Day</h1>
             <p>{recipe.strMeal}</p> 
-            <p>{recipe.strDrinkAlternate}</p>
+            {/* <p>{recipe.strDrinkAlternate}</p> */}
             <p>{recipe.strInstructions}</p>
             <img className="img_recipe" src={recipe.strMealThumb} alt={recipe.strMeal} />
             {/* Bouton pour ouvrir la modale */}
@@ -121,29 +121,9 @@ function RecipeOfTheDay() {
                         <h2>{recipe.strMeal} - Détails</h2>
                         <h3>Ingrédients</h3>
                         <ul>
-                            {/* {getIngredients().map((item, index) => (
+                            {getIngredients().map((item, index) => (
                                 <li key={index}>{item}</li>
-                            ))} */}
-                            <li>{recipe.strIngredient1}</li>
-                            <li>{recipe.strIngredient2}</li>
-                            <li>{recipe.strIngredient3}</li>
-                            <li>{recipe.strIngredient4}</li>
-                            <li>{recipe.strIngredient5}</li>
-                            <li>{recipe.strIngredient6}</li>
-                            <li>{recipe.strIngredient7}</li>
-                            <li>{recipe.strIngredient8}</li>
-                            <li>{recipe.strIngredient9}</li>
-                            <li>{recipe.strIngredient10}</li>
-                            <li>{recipe.strIngredient11}</li>
-                            <li>{recipe.strIngredient12}</li>
-                            <li>{recipe.strIngredient13}</li>
-                            <li>{recipe.strIngredient14}</li>
-                            <li>{recipe.strIngredient15}</li>
-                            <li>{recipe.strIngredient16}</li>
-                            <li>{recipe.strIngredient17}</li>
-                            <li>{recipe.strIngredient18}</li>
-                            <li>{recipe.strIngredient19}</li>
-                            <li>{recipe.strIngredient20}</li>
+                            ))}
                         </ul>
                         <h3>Instructions</h3>
                         <p>{recipe.strInstructions}</p>
