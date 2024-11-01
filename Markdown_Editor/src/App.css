@@ -1,5 +1,4 @@
-
-body{
+body {
   /* background-color: #faf0e6; */
   margin: 0 auto;
   padding: 2rem;
@@ -26,36 +25,85 @@ body{
   align-items: center;
 }
 
-  .btn:not(:disabled):hover,
-  .btn:not(:disabled):focus {
-    outline: 0;
-    background: white;
-    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
-  }
+.btn:not(:disabled):hover,
+.btn:not(:disabled):focus {
+  outline: 0;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .2), 0 3px 8px 0 rgba(0, 0, 0, .15);
+}
 
 .btn:disabled {
-    filter: saturate(0.2) opacity(0.5);
-    -webkit-filter: saturate(0.2) opacity(0.5);
-    cursor: not-allowed;
-  }
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
 
-.api{
+.api {
   display: flex;
   flex-direction: column;
   gap: 4em;
   padding: 40px;
 }
+
 .show_time {
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
 }
+
 .quote_of_the_day {
   display: flex;
   gap: 2em;
 }
 
-.event{
+.event {
   display: flex;
   gap: 2em;
+}
+
+
+/** Css edit_Markdown **/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3.5rem;
+  background-color: bisque;
+  padding: .5rem;
+
+}
+
+.js-ct {
+  display: flex;
+  justify-content: space-between;
+}
+
+.writeMd {
+  width: auto;
+  height: auto;
+}
+
+textarea {
+  padding: 10px 10px;
+  width: 50vw;
+  height: 90vh;
+
+}
+
+.toHtml {
+  width: auto;
+  height: auto;
+  border: 1px solid #FDFDFFFF;
+
+}
+
+.content {
+  width: 50vw;
+  height: 90vh;
+}
+
+.style-btn {
+  width: 70px;
+  height: 40px;
 }
