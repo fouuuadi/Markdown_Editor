@@ -1,42 +1,110 @@
-#root {
+body {
+  /* background-color: #faf0e6; */
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #000;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  transition: 200ms;
+  width: 15vh;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btn:not(:disabled):hover,
+.btn:not(:disabled):focus {
+  outline: 0;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .2), 0 3px 8px 0 rgba(0, 0, 0, .15);
 }
 
-.card {
-  padding: 2em;
+.btn:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
 }
 
-.read-the-docs {
-  color: #888;
+.api {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding: 40px;
+}
+
+.show_time {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.quote_of_the_day {
+  display: flex;
+  gap: 2em;
+}
+
+.event {
+  display: flex;
+  gap: 2em;
+}
+
+
+/** Css edit_Markdown **/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3.5rem;
+  background-color: bisque;
+  padding: .5rem;
+
+}
+
+.js-ct {
+  display: flex;
+  justify-content: space-between;
+}
+
+.writeMd {
+  width: auto;
+  height: auto;
+}
+
+textarea {
+  padding: 10px 10px;
+  width: 50vw;
+  height: 90vh;
+
+}
+
+.toHtml {
+  width: auto;
+  height: auto;
+  border: 1px solid #FDFDFFFF;
+
+}
+
+.content {
+  width: 50vw;
+  height: 90vh;
+}
+
+.style-btn {
+  width: 70px;
+  height: 40px;
 }
