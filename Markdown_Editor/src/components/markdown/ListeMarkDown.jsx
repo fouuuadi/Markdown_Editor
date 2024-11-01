@@ -14,11 +14,11 @@ const [Tableau, setTableau] = useState([
 
 // code fait par Hugo Martins (assisté par ChatGPT de l'ordre d'environ 10% du code actuel sur la page)
     return ( 
-        <div>
+        <div className='section2'>
             {Tableau.map((e, index) =>(
-            <div key = {index} className='quote_of_the_day'>
+            <div key = {index} className='item'>
                 {e.nom}
-                <button onClick={() =>setTableau(Tableau.filter((_, i) => i !== index))}>Supprimer le fichier</button>
+                <button className="btn_list_markdown" onClick={() =>setTableau(Tableau.filter((_, i) => i !== index))}>Supprimer le fichier</button>
                <ModifierMarkDown Tableau={Tableau} setTableau={setTableau} index={index}/>
             </div>
             ))}
@@ -31,9 +31,9 @@ const [Tableau, setTableau] = useState([
 
 export function AjouterMarkDown({Tableau, setTableau}){
     return (
-        <div className='api'>
-            <button onClick={() => setTableau([])}>Supprimer tout les fichiers</button>
-            <button onClick={() => setTableau([...Tableau, {nom:'Nouveau fichier', contenu:'bonjour'}])}>Ajouter un fichier</button>            
+        <div className='section2_btn'>
+            <button className="btn_list_markdown" onClick={() => setTableau([])}>Supprimer tout les fichiers</button>
+            <button className="btn_list_markdown" onClick={() => setTableau([...Tableau, {nom:'Nouveau fichier', contenu:'bonjour'}])}>Ajouter un fichier</button>            
         </div>
     )
 }
@@ -45,15 +45,15 @@ export function ModifierMarkDown({Tableau, setTableau, index}) {
 
     return (
         <>
-            <div className='quote_of_the_day'>
-                <button onClick={() => setTextArea(true)}>Modifier le fichier</button>
+            <div>
+                <button className="btn_list_markdown" onClick={() => setTextArea(true)}>Modifier le fichier</button>
             </div>
             <div>
                 {TextArea && (
                     <div>
                         <textarea defaultValue={newContent} onChange={(event) => setNewContent(event.target.value)}/>
                         <br/>
-                        <button onClick={() => {
+                        <button className="btn_list_markdown" onClick={() => {
                                                 setTextArea(false);
                                                 setTableau(Tableau.map((item, i) =>i === index ? { ...item, contenu: newContent } : item));
                                             }
