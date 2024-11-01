@@ -113,8 +113,10 @@ function RecipeOfTheDay() {
             {/* Bouton pour ouvrir la modale */}
             <button onClick={() => setVisible(true)}>Voir les détails</button>
 
+            {visible && <div className="blur-background" onClick={() => setVisible(false)}></div>}
+
             {/* Modale pour afficher les détails */}
-            <dialog open={visible}>
+            <dialog className="dialog" open={visible}>
                 <div>
                     <h2>{recipe.strMeal} - Détails</h2>
                     <h3>Ingrédients</h3>
@@ -128,7 +130,6 @@ function RecipeOfTheDay() {
                     <button onClick={() => setVisible(false)}>Fermer</button>
                 </div>
             </dialog>
-           
         </div>
     );
 }
