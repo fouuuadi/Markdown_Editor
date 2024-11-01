@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function JokeOfTheDay() {
     const [joke, setJoke] = useState({
@@ -37,7 +37,7 @@ function JokeOfTheDay() {
     }, []); 
 
     return (
-        <div>
+        <div className='joke'>
             <h1>Joke of the Day</h1>
             <p>{joke.setup}</p> {/* Affiche la première partie de la blague */}
             <p>{joke.punchline}</p> {/* Affiche la deuxième partie de la blague */}
