@@ -20,20 +20,20 @@ import {
 
 function MarkdownEditorRouter() {
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Acceuil />,
-      children: [
-        { path: "UpdateMarkdown", element: <UpdateMarkdown /> }
-      ],
-    },
-  ]);
+    const router = createBrowserRouter ([
+        {
+          path: "/",
+          element : <Acceuil/>,
+          children: [
+            { path: "UpdateMarkdown", element: <UpdateMarkdown/>}
+          ],
+        },
+      ]);
 
-  //render
+//render
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}/>
     </>
   )
 }

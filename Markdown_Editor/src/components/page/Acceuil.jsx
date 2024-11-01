@@ -4,6 +4,8 @@ import HistoricalEvents from '../api/HistoricalEvents'
 import JokeOfTheDay from '../api/Joke'
 import MocktailOfTheDay from '../api/Mocktail'
 import RecipeOfTheDay from '../api/Recipe'
+import ListeMarkDown from '../api/ListeMarkDown'
+
 
 //render
 function Acceuil() {
@@ -18,6 +20,7 @@ function Acceuil() {
         <JokeOfTheDay/>
         <MocktailOfTheDay/>
         <RecipeOfTheDay/>
+        <ListeMarkDown/>
       </div>
     </div>
 
