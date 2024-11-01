@@ -57,7 +57,7 @@ function RecipeOfTheDay() {
         dateModified: ""
     });
 
-    // Code sur dialog inspiré du cours
+    
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -90,6 +90,7 @@ function RecipeOfTheDay() {
     }, []); 
 
 
+// tant qu'ils existent ajout mesure et ingredient dans tableau pour le recuperer et l'afficher
     const getIngredients = () => {
         const ingredients = [];
         for (let i = 1; i <= 20; i++) {
@@ -108,12 +109,14 @@ function RecipeOfTheDay() {
             <p>{recipe.strMeal}</p> 
             {/* <p>{recipe.strDrinkAlternate}</p> */}
             <p>{recipe.strInstructions}</p>
+            <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+
+
             <img className="img_recipe" src={recipe.strMealThumb} alt={recipe.strMeal} />
             {/* Bouton pour ouvrir la modale */}
             <button onClick={() => setVisible(true)}>Voir les détails</button>
 
             {/* Modale pour afficher les détails */}
-            {/* {visible && ( */}
             <dialog open={visible}>
 
                 <div>
@@ -123,6 +126,9 @@ function RecipeOfTheDay() {
                         <ul>
                             {getIngredients().map((item, index) => (
                                 <li key={index}>{item}</li>
+                            {/* appel fonction faisant le tour du tableau réunissant les ingrédients et les mesures */}
+                            {getIngredients().map((ingredient, measure) => (
+                                <li key={measure}>{ingredient}</li>
                             ))}
                         </ul>
                         <h3>Instructions</h3>
@@ -131,7 +137,7 @@ function RecipeOfTheDay() {
                     </div>
                 </div>
             </dialog>
-            {/* )} */}
+           
         </div>
     );
 }
