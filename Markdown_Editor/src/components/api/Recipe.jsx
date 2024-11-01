@@ -89,6 +89,7 @@ function RecipeOfTheDay() {
         newFetch(); 
     }, []); 
 
+
 // tant qu'ils existent ajout mesure et ingredient dans tableau pour le recuperer et l'afficher
     const getIngredients = () => {
         const ingredients = [];
@@ -106,7 +107,7 @@ function RecipeOfTheDay() {
         <div className='recipe'>
             <h1>Recipe Of The Day</h1>
             <p>{recipe.strMeal}</p> 
-            <p>{recipe.strDrinkAlternate}</p>
+            {/* <p>{recipe.strDrinkAlternate}</p> */}
             <p>{recipe.strInstructions}</p>
             <img src={recipe.strMealThumb} alt={recipe.strMeal} />
 
@@ -115,26 +116,23 @@ function RecipeOfTheDay() {
             {/* Bouton pour ouvrir la modale */}
             <button onClick={() => setVisible(true)}>Voir les détails</button>
 
-            {/* Modale pour afficher les détails */}
-            <dialog open={visible}>
+            {visible && <div className="blur-background" onClick={() => setVisible(false)}></div>}
 
+            {/* Modale pour afficher les détails */}
+            <dialog className="dialog" open={visible}>
                 <div>
-                    <div>
-                        <h2>{recipe.strMeal} - Détails</h2>
-                        <h3>Ingrédients</h3>
-                        <ul>
-                            {/* appel fonction faisant le tour du tableau réunissant les ingrédients et les mesures */}
-                            {getIngredients().map((ingredient, measure) => (
-                                <li key={measure}>{ingredient}</li>
-                            ))}
-                        </ul>
-                        <h3>Instructions</h3>
-                        <p>{recipe.strInstructions}</p>
-                        <button onClick={() => setVisible(false)}>Fermer</button>
-                    </div>
+                    <h2>{recipe.strMeal} - Détails</h2>
+                    <h3>Ingrédients</h3>
+                    <ul>
+                        {getIngredients().map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                    <h3>Instructions</h3>
+                    <p>{recipe.strInstructions}</p>
+                    <button onClick={() => setVisible(false)}>Fermer</button>
                 </div>
             </dialog>
-           
         </div>
     );
 }
