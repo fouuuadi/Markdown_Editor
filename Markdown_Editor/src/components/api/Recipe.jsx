@@ -108,13 +108,10 @@ function RecipeOfTheDay() {
             <p>{recipe.strMeal}</p> 
             <p>{recipe.strDrinkAlternate}</p>
             <p>{recipe.strInstructions}</p>
-<<<<<<< HEAD
             <img src={recipe.strMealThumb} alt={recipe.strMeal} />
 
 
-=======
             <img className="img_recipe" src={recipe.strMealThumb} alt={recipe.strMeal} />
->>>>>>> d433d2aa9e87b1166d469cf925a23c656c6c2fa6
             {/* Bouton pour ouvrir la modale */}
             <button onClick={() => setVisible(true)}>Voir les détails</button>
 
