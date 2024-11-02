@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function MockatailOfTheDay() {
+function MocktailOfTheDay() {
     const [mocktail, setMocktail] = useState({
         id: null,
         strDrink: "",
@@ -47,12 +47,12 @@ function MockatailOfTheDay() {
     }, []);
 
     return (
-        <div>
+        <div className='mocktail'>
             <h1>Mocktail Of The Day</h1>
             <h2>{mocktail.strDrink}</h2>
-            <img src={mocktail.strDrinkThumb} alt={mocktail.strDrinkThumb} />
+            <img className="img_mocktail" src={mocktail.strDrinkThumb} alt={mocktail.strDrinkThumb} />
         </div>
     )
 }
 
-export default MockatailOfTheDay;
+export default MocktailOfTheDay;

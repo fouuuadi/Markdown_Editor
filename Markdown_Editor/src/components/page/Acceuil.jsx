@@ -2,23 +2,41 @@ import ShowTime from '../api/ShowTime'
 import QuoteOfTheDay from '../api/QuoteOfTheDay'
 import HistoricalEvents from '../api/HistoricalEvents'
 import JokeOfTheDay from '../api/Joke'
-import RecipeOfTheDay from '../api/Recipe'
 import MocktailOfTheDay from '../api/Mocktail'
+import RecipeOfTheDay from '../api/Recipe'
+import ListeMarkDown from '../markdown/ListeMarkDown'
+import Button from '../button/Button'
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'; 
 
 
 //render
 function Acceuil() {
+
+  const navigate = useNavigate();
+
+
+
   return (
-    <div>      
+    <div>
+      <header>
         <h1>Markdown Editor</h1>
+        <Button
+          action={()=>navigate("/UpdateMarkdown")}
+          label="Page 2"
+          color="none"
+          />
+      </header>     
         <h2>API</h2>
-      <div className='api'>  
+      <div className='section1'>  
         <ShowTime/>
         <QuoteOfTheDay/>
         <HistoricalEvents/>
-        <JokeOfTheDay />
-        <MocktailOfTheDay />
-        <RecipeOfTheDay />
+        <JokeOfTheDay/>
+        <MocktailOfTheDay/>
+        <RecipeOfTheDay/>        
+      </div>
+      <div className='section2'>
+        <ListeMarkDown/>
       </div>
     </div>
 

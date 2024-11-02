@@ -1,6 +1,6 @@
 //import des différentes pages
 import Acceuil from '../page/Acceuil'
-import UpdateMarkdown from './MarkdownEditorRouter'
+import UpdateMarkdown from '../page/UpdateMarkdown'
 //import des différents mots clee de react-router-dom
 import {
   createBrowserRouter,
@@ -24,10 +24,15 @@ function MarkdownEditorRouter() {
         {
           path: "/",
           element : <Acceuil/>,
-          children: [
-            { path: "UpdateMarkdown", element: <UpdateMarkdown/>}
-          ],
+          // children: [
+          //   { path: "UpdateMarkdown", element: <UpdateMarkdown/>}
+          // ],
         },
+        { 
+          path: "/UpdateMarkdown", 
+          element: <UpdateMarkdown /> 
+        }, 
+
       ]);
 
 //render
