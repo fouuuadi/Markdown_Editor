@@ -12,13 +12,8 @@ import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 //render
 function Acceuil() {
 
-  const location = useLocation();
   const navigate = useNavigate();
 
-
-  const isOnUpdatePage = location.pathname === "/UpdateMarkdown";
-  const buttonLabel = isOnUpdatePage ? "Page 1" : "Page 2";
-  const targetPath = isOnUpdatePage ? "/" : "/UpdateMarkdown";
 
 
   return (
@@ -26,11 +21,10 @@ function Acceuil() {
       <header>
         <h1>Markdown Editor</h1>
         <Button
-          action={()=>navigate(targetPath)}
-          label={buttonLabel}
+          action={()=>navigate("/UpdateMarkdown")}
+          label="Page 2"
           color="none"
           />
-          <Outlet/>
       </header>     
         <h2>API</h2>
       <div className='section1'>  

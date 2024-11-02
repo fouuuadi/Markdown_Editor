@@ -1,8 +1,14 @@
 import { useState } from 'react'
 import { marked } from 'marked'
+import Button from '../button/Button';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'; 
+
 
 
 function UpdateMarkdown() {
+
+  const navigate = useNavigate();
+  
 
   const [md, setMd] = useState(""); // stocker la valeur du markdown;
   const [textPlain, setTextPlain] = useState(""); // pour la conversion en text brut 
@@ -54,6 +60,14 @@ function UpdateMarkdown() {
   // et la parser dans le MdRerender
   return (
     <>
+      <header>
+        <h1>Markdown Editor</h1>
+        <Button
+          action={()=>navigate("/")}
+          label="Page 1"
+          color="none"
+          />
+      </header> 
       <section className='header'>
         {/** un button pour export */}
         <button type='submit' onClick={() => HandleExport()} className='btn-export style-btn'>export</button>

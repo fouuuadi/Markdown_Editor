@@ -24,10 +24,15 @@ function MarkdownEditorRouter() {
         {
           path: "/",
           element : <Acceuil/>,
-          children: [
-            { path: "UpdateMarkdown", element: <UpdateMarkdown/>}
-          ],
+          // children: [
+          //   { path: "UpdateMarkdown", element: <UpdateMarkdown/>}
+          // ],
         },
+        { 
+          path: "/UpdateMarkdown", 
+          element: <UpdateMarkdown /> 
+        }, 
+
       ]);
 
 //render
