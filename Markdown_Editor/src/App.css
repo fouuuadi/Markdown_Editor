@@ -11,6 +11,9 @@ p{
   font-size: 400;
   font-size: 20px;
 }
+body{
+  background-color: #000000;
+}
 
 .btn {
   border-radius: 12px;
