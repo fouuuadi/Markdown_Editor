@@ -10,6 +10,12 @@ body{
 p{
   font-size: 400;
   font-size: 20px;
+<<<<<<< HEAD
+=======
+}
+body{
+  background-color: #000000;
+>>>>>>> aryles
 }
 
 .btn {
