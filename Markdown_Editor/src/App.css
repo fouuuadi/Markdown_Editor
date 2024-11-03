@@ -2,7 +2,6 @@
 body{
   /* background-color: #faf0e6; */
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   background-color: #2d2d2d;
 }
@@ -252,7 +251,7 @@ textarea {
   width: auto;
   height: auto;
   border: 1px solid #FDFDFFFF;
-
+  overflow-y: auto;
 }
 
 .content {

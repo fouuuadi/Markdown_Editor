@@ -40,7 +40,7 @@ function UpdateMarkdown() {
   }
 
   return (
-    <>
+    <div className='page2'>
       <header>
         <h1>Markdown Editor</h1>
         <Button action={() => navigate('/')} label="Page 1" color="none" />
@@ -65,7 +65,7 @@ function UpdateMarkdown() {
           <div className='content' dangerouslySetInnerHTML={{ __html: textPlain }} />
         </section>
       </div>
-    </>
+    </div>
   );
 }
 
