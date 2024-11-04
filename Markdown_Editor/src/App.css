@@ -3,16 +3,30 @@ body{
   /* background-color: #faf0e6; */
   margin: 0 auto;
   text-align: center;
-  background-color: #2d2d2d;
+  background-color: #faf0e6;
 }
 
 p{
   font-size: 400;
-  font-size: 20px;
 }
-body{
+/* body{
   background-color: #000000;
+} */
+
+.btn_page1 {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 30px;
 }
+
+.btn_page2 {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 30px;
+}
+
 
 .btn {
   border-radius: 12px;
@@ -175,7 +189,7 @@ textarea {
   max-width: 600px;
   max-height: 600px;
   padding: 20px;
-  background-color: #2d2d2d;
+  background-color: #faf0e6;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001;

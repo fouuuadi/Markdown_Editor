@@ -20,11 +20,14 @@ function Acceuil() {
     <div>
       <header>
         <h1>Markdown Editor</h1>
+        <div className='btn_page1'>
         <Button
+          className="btn_page1"
           action={()=>navigate("/UpdateMarkdown")}
           label="Page 2"
           color="none"
-          />
+          />          
+        </div>
       </header>     
         <h2>API</h2>
       <div className='section1'>  

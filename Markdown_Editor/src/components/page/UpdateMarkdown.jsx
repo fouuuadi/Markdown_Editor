@@ -43,7 +43,10 @@ function UpdateMarkdown() {
     <div className='page2'>
       <header>
         <h1>Markdown Editor</h1>
-        <Button action={() => navigate('/')} label="Page 1" color="none" />
+        <div className='btn_page2'>
+          <Button action={() => navigate('/')} label="Page 1" color="none" />
+        </div>
+        
       </header>
       <section className='header'>
         <input 
